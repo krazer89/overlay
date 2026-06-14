@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+# Copyright 2025-2026 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+description="EternalTerminal Server"
+pidfile="/run/${RC_SVCNAME}.pid"
+command="/usr/bin/etserver"
+command_args="--cfgfile=/etc/et.cfg --logtostdout"
+command_background="true"
+
+depend() {
+    need net
+    use logger
+}

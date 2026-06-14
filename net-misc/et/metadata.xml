@@ -1,0 +1,15 @@
+<pkgmetadata>
+    <maintainer type="person">
+        <email>jamie@krazer.one</email>
+    </maintainer>
+    <use>
+        <flag name="coverage">Enable code coverage support</flag>
+        <flag name="crash_log">Enable crash log support</flag>
+        <flag name="sentry">Enable Sentry SDK crash reporting</flag>
+        <flag name="server">Install server init scripts/cfg</flag>
+        <flag name="telemetry">Enable telemetry support</flag>
+    </use>
+    <upstream>
+        <remote-id type="github">MisterTea/EternalTerminal</remote-id>
+    </upstream>
+</pkgmetadata>

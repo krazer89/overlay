@@ -13,3 +13,8 @@ x11-misc/copyq:
   resolver: git
   options:
     url: https://github.com/hluk/CopyQ
+
+net-misc/ethereal:
+  resolver: git
+  options:
+    url: https://github.com/MisterTea/EternalTerminal
