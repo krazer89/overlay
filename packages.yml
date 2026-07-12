@@ -18,3 +18,9 @@ net-misc/et:
   resolver: git
   options:
     url: https://github.com/MisterTea/EternalTerminal
+    disable_semver: true
+    ignore_versions:
+      - v1.*
+    version_transform:
+      from: "et-v"
+      to: ""
