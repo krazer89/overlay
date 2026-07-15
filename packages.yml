@@ -24,3 +24,8 @@ net-misc/et:
     version_transform:
       from: "et-v"
       to: ""
+
+media-sound/dmidiplayer:
+  resolver: git
+  options:
+    url: https://github.com/pedrolcl/dmidiplayer
