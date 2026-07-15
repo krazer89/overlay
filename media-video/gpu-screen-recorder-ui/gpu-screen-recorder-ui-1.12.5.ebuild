@@ -45,7 +45,7 @@ BDEPEND="
 	${DEPEND}
 	virtual/pkgconfig
 	dev-util/wayland-scanner
-	x11-misc/gtk-update-icon-cache
+	dev-util/gtk-update-icon-cache
 "
 
 src_configure() {
