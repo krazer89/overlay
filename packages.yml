@@ -29,3 +29,8 @@ media-sound/dmidiplayer:
   resolver: git
   options:
     url: https://github.com/pedrolcl/dmidiplayer
+
+media-video/ffsubsync-bin:
+  resolver: git
+  options:
+    url: https://github.com/smacke/ffsubsync
