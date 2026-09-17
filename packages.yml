@@ -34,3 +34,17 @@ media-video/ffsubsync-bin:
   resolver: git
   options:
     url: https://github.com/smacke/ffsubsync
+
+www-apps/glance:
+  resolver: git
+  options:
+    url: https://github.com/glanceapp/glance
+  steps:
+    - checkout: https://github.com/glanceapp/glance.git
+    - original_ebuild: new.ebuild
+    - generate_go_deps:
+        mode: full
+        dir: go
+        name: default
+    - upload_artifact: deps.tar.xz
+    - ebuild: new.ebuild

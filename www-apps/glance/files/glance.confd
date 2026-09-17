@@ -1,0 +1,4 @@
+# /etc/conf.d/glance
+
+# Additional options to pass to glance daemon
+#GLANCE_OPTS="--config /etc/glance/glance.yml"

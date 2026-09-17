@@ -1,0 +1,22 @@
+[Unit]
+Description=Glance self-hosted dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=glance
+Group=glance
+WorkingDirectory=/var/lib/glance
+ExecStart=/usr/bin/glance --config /etc/glance/glance.yml
+Restart=on-failure
+RestartSec=5
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/glance
+
+[Install]
+WantedBy=multi-user.target

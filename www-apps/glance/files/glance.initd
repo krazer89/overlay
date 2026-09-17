@@ -1,0 +1,20 @@
+#!/sbin/openrc-run
+# Copyright 2026 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+description="Glance self-hosted dashboard"
+pidfile="${PIDFILE:-/run/glance.pid}"
+command="/usr/bin/glance"
+command_args="${GLANCE_OPTS:---config /etc/glance/glance.yml}"
+command_user="glance:glance"
+command_background="true"
+start_stop_daemon_args="--stdout /var/log/glance.log --stderr /var/log/glance.log"
+
+depend() {
+	use net
+	after net.mount
+}
+
+start_pre() {
+	checkpath -f -m 0644 -o glance:glance /var/log/glance.log
+}
