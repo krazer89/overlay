@@ -133,8 +133,15 @@ func entrypoint(cmd *cobra.Command, args []string) error {
 		shouldTransform := ce.Resolver == packages.GitResolver && ce.GitOptions.VersionTransform.From != ""
 		if shouldTransform {
 			e.Version = strings.ReplaceAll(e.Version,
-				ce.GitOptions.VersionTransform.To,
 				ce.GitOptions.VersionTransform.From,
+				ce.GitOptions.VersionTransform.To,
+			)
+		}
+
+		if shouldTransform {
+			latestVersion = strings.ReplaceAll(latestVersion,
+				ce.GitOptions.VersionTransform.From,
+				ce.GitOptions.VersionTransform.To,
 			)
 		}
 
