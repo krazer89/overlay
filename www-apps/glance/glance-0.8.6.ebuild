@@ -25,7 +25,7 @@ DEPEND="
     acct-user/glance
 "
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.26.3"
+BDEPEND=">=dev-lang/go-1.27.1"
 
 src_compile() {
     local lDFLAGS="-s -w"
