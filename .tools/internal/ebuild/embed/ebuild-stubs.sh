@@ -21,6 +21,9 @@
 # want to implement this further.
 inherit() { return 0; }
 
+acct-group_add_deps() { return 0; }
+acct-user_add_deps() { return 0; }
+
 # version related functions that don't need to work for linting.
 ver_cut() { return 0; }
 ver_rs() { return 0; }

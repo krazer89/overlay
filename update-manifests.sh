@@ -4,7 +4,7 @@
 set -e
 
 # Find all .ebuild files and update their manifests
-find . -name "*.ebuild" -print0 | while IFS= read -r -d '' ebuild_path; do
+find . -name "*.ebuild" -not -path "*/.*" -print0 | while IFS= read -r -d '' ebuild_path; do
     # Extract the directory and filename
     ebuild_dir=$(dirname "$ebuild_path")
     ebuild_file=$(basename "$ebuild_path")
