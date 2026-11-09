@@ -89,8 +89,9 @@ func (e UploadArtifactStep) Run(ctx context.Context, env Environment) (*StepOutp
 		// 2. If it doesn't exist, create a new release
 		env.log.With("tag", tagName).Info("release not found, creating a new one")
 		newRelease := &github.RepositoryRelease{
-			TagName: github.String(tagName),
-			Name:    github.String(tagName),
+			TagName:              github.Ptr(tagName),
+			Name:                 github.Ptr(tagName),
+			GenerateReleaseNotes: github.Ptr(false),
 		}
 		release, _, err = client.Repositories.CreateRelease(ctx, owner, repo, newRelease)
 		if err != nil {
