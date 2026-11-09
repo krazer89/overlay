@@ -19,12 +19,12 @@ First, mask all of the packages in this overlay:
 
 ```bash
 mkdir -p /etc/portage/package.mask
-echo "*/*::krazer" >/etc/portage/package.mask/krazer
+echo "*/*::krazer89" >/etc/portage/package.mask/krazer89
 ```
 
 Then, unmask packages as needed by either;
 
-* Automatic (via `dispatch-conf`): `emerge -av --autounmask <package>::krazer`
+* Automatic (via `dispatch-conf`): `emerge -av --autounmask <package>::krazer89`
 * Manual: Create a file in `/etc/portage/package.unmask`
 
 ## Development
