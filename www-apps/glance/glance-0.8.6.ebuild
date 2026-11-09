@@ -13,7 +13,7 @@ if [[ ${PV} == *9999* ]]; then
     EGIT_REPO_URI="https://github.com/glanceapp/glance.git"
 else
     SRC_URI="https://github.com/glanceapp/glance/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-    https://github.com/krazer89/overlay/releases/download/${PN}-${PV}/deps.tar.xz -> deps.tar.xz"
+    https://github.com/krazer89/overlay/releases/download/${PN}-${PV}/deps.tar.xz -> deps-${PV}.tar.xz"
     KEYWORDS="~amd64 ~arm64"
 fi
 
