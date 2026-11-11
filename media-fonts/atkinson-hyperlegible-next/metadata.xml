@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>admin@krazer.one</email>
+		<name>Krazer</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">googlefonts/atkinson-hyperlegible-next</remote-id>
+	</upstream>
+</pkgmetadata>

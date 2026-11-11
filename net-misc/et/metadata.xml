@@ -1,6 +1,6 @@
 <pkgmetadata>
     <maintainer type="person">
-        <email>jamie@krazer.one</email>
+        <email>admin@krazer.one</email>
     </maintainer>
     <use>
         <flag name="coverage">Enable code coverage support</flag>
